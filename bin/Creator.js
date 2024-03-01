@@ -1,10 +1,10 @@
 const chalk = require("chalk");
-const util = require("util");
+const { promisify } = require("util");
 const ora = require("ora");
 const path = require("path");
 const Inquirer = require("inquirer");
 const { getZhuRongRepo, getTagsByRepo } = require("./api");
-
+const fsFile = require('fs')
 const downloadGitRepo = require("download-git-repo"); // 不支持 Promise
 
 class Creator {
@@ -13,16 +13,14 @@ class Creator {
     this.projectName = projectName;
     this.projectPath = projectPath;
     // 改造 download-git-repo 支持 promise, 才能执行await微任务
-    this.downloadGitRepo = util.promisify(downloadGitRepo);
+    this.downloadGitRepo = promisify(downloadGitRepo);
   }
-
   /* loading 项目中 */
   async loading(message, fn, ...args) {
-    const spinner = ora(message);
-    spinner.start(); // 开启加载
     try {
       // 执行函数，下载文件行为
-      let executeRes = await fn(...args);
+      // console.log(fn, 25);
+      let executeRes = fn && await fn(...args);
       // 加载成功
       spinner.succeed();
       return executeRes;
@@ -39,19 +37,25 @@ class Creator {
     // 模板下载地址
     const templateUrl = `github:Hansen520/${repo}`;
     // 调用 downloadGitRepo 方法将对应模板下载到指定目录
-    console.log(this.downloadGitRepo, 40);
-    await this.loading(
-      chalk.cyan("下载模板中，请等待..."),
+    const message = '下载模板中，请等待...';
+    const spinner = ora(message);
+    spinner.start(); // 开启加载
+    const result = await this.loading(
+      message,
       this.downloadGitRepo,
       templateUrl,
       projectName,
-      {
-        clone: true,
-      },
       (err) => {
-        err ? console.log(err) : console.log(chalk.cyan("下载成功"));
+        if(err) {
+          console.log(err, '下载失败');
+          spinner.fail();
+          return;
+        }
+        spinner.succeed();
+        console.log(chalk.cyan("下载成功"));
       }
     );
+    return result;
   }
 
   /**

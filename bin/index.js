@@ -6,11 +6,14 @@ const Inquirer = require("inquirer");
 const ora = require("ora");
 const figlet = require("figlet");
 const path = require("path");
+const fsFile = require('fs')
+const { promisify } = require('util');
 const fs = require("fs-extra");
 const Creator = require("./Creator");
 
 const downloadGitRepo = require("download-git-repo");
 
+const readFile = promisify(fsFile.stat);
 // /**
 //  * loading加载效果
 //  * @param {String} message 加载信息
@@ -96,6 +99,14 @@ program
       }
     } else {
       creator.create(projectName); // 创建项目
+      // promisify(fs.readFile);
+      // console.log(__dirname, 103);
+      // const buf = await readFile('.');
+      // console.log(buf, 105);
+
+      // downloadGitRepo("github:Hansen520/react-template", projectName, (err) => {
+      //   console.log(err, 100);
+      // })
     }
   });
 
