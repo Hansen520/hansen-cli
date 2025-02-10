@@ -1,0 +1,26 @@
+{
+  "name": "@hansen-cli/utils",
+  "version": "1.2.1",
+  "description": "",
+  "publishConfig": {
+    "access": "public"
+  },
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "fs-extra": "^11.2.0",
+    "npminstall": "^7.12.0",
+    "url-join": "^5.0.0"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.4"
+  }
+}
