@@ -51,8 +51,6 @@ ts一些项目,在package里面添加
 
 ```
 
-
-
 ## 上传npm初始化
 
 `npx changeset init`
