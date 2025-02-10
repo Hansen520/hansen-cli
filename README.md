@@ -34,6 +34,8 @@ h5
 
 `pnpm --filter create add @hansen-cli/utils --workspace`
 
+如果已经进入到了目录里面了，那就直接在该目录下面pnpm install就可以了
+
 ## 初始化 tsconfig.json，用exec执行
 
 在子包里面执行命令必需要有**exec**执行项
@@ -65,7 +67,7 @@ ts一些项目,在package里面添加
 
 这个命令是基于git的，接下来我们可以进行一系列git操作一直到git commit，最后可以了推送的npm里面的，记得npm一定要登录噢，登录`npm adduser`
 
-`npx changeset publish`
+`npx changeset publish`  推送项目数据
 
 ## 脚手架添加命令
 

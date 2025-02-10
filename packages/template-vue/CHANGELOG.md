@@ -1,5 +1,11 @@
 # @hansen-cli/template-vue
 
+## 1.0.1
+
+### Patch Changes
+
+- 增加 vue、react 模板
+
 ## 2.0.0
 
 ### Major Changes

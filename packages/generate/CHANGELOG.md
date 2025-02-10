@@ -1,7 +1,7 @@
 # @hansen-cli/generate
 
-## 2.0.0
+## 1.0.1
 
-### Major Changes
+### Patch Changes
 
-- hansen-cli 项目模板初始化
+- 增加 vue、react 模板
