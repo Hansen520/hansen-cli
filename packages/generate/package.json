@@ -1,6 +1,6 @@
 {
-  "name": "@hansen-cli/generate",
-  "version": "1.0.1",
+  "name": "@hansens-cli/generate",
+  "version": "1.0.3",
   "description": "generate",
   "publishConfig": {
     "access": "public"

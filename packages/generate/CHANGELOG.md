@@ -1,7 +1,7 @@
-# @hansen-cli/generate
+# @hansens-cli/generate
 
-## 1.0.1
+## 1.0.3
 
 ### Patch Changes
 
-- 增加 vue、react 模板
+- vue react 模板

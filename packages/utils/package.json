@@ -1,6 +1,6 @@
 {
-  "name": "@hansen-cli/utils",
-  "version": "1.0.1",
+  "name": "@hansens-cli/utils",
+  "version": "1.0.3",
   "description": "",
   "publishConfig": {
     "access": "public"

@@ -4,7 +4,7 @@
  */
 import { select, input, confirm  } from '@inquirer/prompts';
 import os from 'node:os';
-import { NpmPackage } from '@hansen-cli/utils';
+import { NpmPackage } from '@hansens-cli/utils';
 import path from 'node:path';
 import ora from 'ora';
 import fse from 'fs-extra';

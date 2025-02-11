@@ -1,6 +1,6 @@
 {
-  "name": "@hansen-cli/cli",
-  "version": "1.0.1",
+  "name": "@hansens-cli/cli",
+  "version": "1.0.3",
   "description": "",
   "type": "module",
   "main": "dist/index.js",
@@ -18,8 +18,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@hansen-cli/create": "workspace:^",
-    "@hansen-cli/generate": "workspace:^",
+    "@hansens-cli/create": "workspace:^",
+    "@hansens-cli/generate": "workspace:^",
     "commander": "^12.1.0",
     "fs-extra": "^11.2.0"
   },

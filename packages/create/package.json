@@ -1,6 +1,6 @@
 {
-  "name": "@hansen-cli/create",
-  "version": "1.0.1",
+  "name": "@hansens-cli/create",
+  "version": "1.0.3",
   "description": "",
   "main": "dist/index.js",
   "type": "module",
@@ -15,7 +15,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@hansen-cli/utils": "workspace:^",
+    "@hansens-cli/utils": "workspace:^",
     "@inquirer/prompts": "^7.2.1",
     "ejs": "^3.1.10",
     "fs-extra": "^11.2.0",

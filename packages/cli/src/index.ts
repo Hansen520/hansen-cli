@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-import create from '@hansen-cli/create';
-import generate from '@hansen-cli/generate';
+import create from '@hansens-cli/create';
+import generate from '@hansens-cli/generate';
 import { Command } from 'commander';
 import fse from 'fs-extra';
 import path from 'node:path';

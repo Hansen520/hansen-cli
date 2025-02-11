@@ -26,10 +26,10 @@ importers:
 
   packages/cli:
     dependencies:
-      '@hansen-cli/create':
+      '@hansens-cli/create':
         specifier: workspace:^
         version: link:../create
-      '@hansen-cli/generate':
+      '@hansens-cli/generate':
         specifier: workspace:^
         version: link:../generate
       commander:
@@ -45,7 +45,7 @@ importers:
 
   packages/create:
     dependencies:
-      '@hansen-cli/utils':
+      '@hansens-cli/utils':
         specifier: workspace:^
         version: link:../utils
       '@inquirer/prompts':

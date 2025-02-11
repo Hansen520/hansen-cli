@@ -1,6 +1,6 @@
 {
-  "name": "@hansen-cli/template-vue",
-  "version": "1.0.1",
+  "name": "@hansens-cli/template-vue",
+  "version": "1.0.3",
   "description": "",
   "main": "index.js",
   "publishConfig": {

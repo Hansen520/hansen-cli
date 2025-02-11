@@ -44,7 +44,7 @@ h5
 
 `pnpm --filter utils exec node ./dist/test.js`
 
-`pnpm --filter core exec npx tsc*`
+`pnpm --filter core exec npx tsc`
 
 ts一些项目,在package里面添加
 
