@@ -1,5 +1,11 @@
 # @hansens-cli/create
 
+## 1.0.4
+
+### Patch Changes
+
+- 重新生成下 dist 文件
+
 ## 1.0.3
 
 ### Patch Changes

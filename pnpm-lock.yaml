@@ -79,24 +79,26 @@ importers:
       cosmiconfig:
         specifier: ^9.0.0
         version: 9.0.0(typescript@5.7.2)
+      fs-extra:
+        specifier: ^11.2.0
+        version: 11.2.0
       openai:
         specifier: ^4.77.0
         version: 4.77.0(encoding@0.1.13)
       ora:
         specifier: ^8.1.1
         version: 8.1.1
+      remark:
+        specifier: ^15.0.1
+        version: 15.0.1
     devDependencies:
       '@types/fs-extra':
         specifier: ^11.0.4
         version: 11.0.4
-      fs-extra:
-        specifier: ^11.2.0
-        version: 11.2.0
-      remark:
-        specifier: ^15.0.1
-        version: 15.0.1
 
   packages/template-react: {}
+
+  packages/template-react-base: {}
 
   packages/template-vue: {}
 
