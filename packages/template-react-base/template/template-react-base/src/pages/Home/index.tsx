@@ -1,11 +1,11 @@
 import React from 'react';
 
-function Layout() {
+function Home() {
   return (
     <div>
-      Layout
+      Home
     </div>
   );
 }
 
-export default Layout;
+export default Home;

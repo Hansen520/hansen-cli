@@ -1,3 +1,7 @@
 # pnpm workspace 是配置在 yaml 文件里的
 packages:
-  - 'packages/*/**'
+  - 'packages/*'
+  - 'packages/template-react-base/template/*'
+  
+
+# pnpm-workspace.yaml 文件是 pnpm 用来管理 monorepo 的配置文件，它定义了工作区中的包和它们的依赖关系。在这个文件中，我们定义了一个工作区，它包含了所有在 packages 目录下的包。这样，我们就可以使用 pnpm 来管理这些包的依赖关系和版本。
