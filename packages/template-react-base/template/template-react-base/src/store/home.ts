@@ -4,12 +4,17 @@
  */
 // store/features/counterSlice.js
 import { createSlice } from '@reduxjs/toolkit';
+import type { PayloadAction } from '@reduxjs/toolkit';
+
+export interface CounterState {
+  value: number;
+}
 
 export const counterSlice = createSlice({
   name: 'counter',
   initialState: {
     value: 0
-  },
+  } as CounterState,
   reducers: {
     increment: state => {
       // Redux Toolkit 允许我们在 reducers 中直接写 'mutating' 逻辑。
@@ -20,7 +25,7 @@ export const counterSlice = createSlice({
       state.value -= 1;
     },
     // 使用 'payload' 参数来传递一个值
-    incrementByAmount: (state, action) => {
+    incrementByAmount: (state, action: PayloadAction<number>) => {
       state.value += action.payload;
     },
   },

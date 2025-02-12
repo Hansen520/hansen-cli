@@ -3,11 +3,11 @@
  * @Description: description
  */
 import history from '@/lib/history';
-import React from 'react';
+import styles from './index.module.scss';
 
 function Login() {
   return (
-    <div onClick={() => history.push('/home')}>
+    <div className={styles.border} onClick={() => history.push('/home')}>
       Login
       <button>跳转</button>
     </div>
