@@ -1,16 +1,15 @@
 {
-    "name": "@hansens-cli/template-react-backend",
-    "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
-    "publishConfig": {
-      "access": "public"
-    },
-    "scripts": {
-      "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "keywords": [],
-    "author": "",
-    "license": "ISC"
-  }
-  
+  "name": "@hansens-cli/template-react-backend",
+  "version": "1.0.1",
+  "description": "",
+  "main": "index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

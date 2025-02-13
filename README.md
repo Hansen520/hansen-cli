@@ -83,3 +83,6 @@ ts一些项目,在package里面添加
 },
 ```
 
+运行
+
+`npx @hansens-cli/cli@latest create`

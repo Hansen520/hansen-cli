@@ -1,5 +1,11 @@
 # @hansens-cli/create
 
+## 1.0.5
+
+### Patch Changes
+
+- 增加 h5 和 banckend 的 react 模板
+
 ## 1.0.4
 
 ### Patch Changes
