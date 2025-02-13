@@ -19,23 +19,23 @@ async function create() {
         choices: [
             {
                 name: 'react 原始项目模板',
-                value: '@hansen-cli/template-react'
+                value: '@hansens-cli/template-react'
             },
             {
                 name: 'react 基础模板、大屏模板',
-                value: '@hansen-cli/template-react-base'
+                value: '@hansens-cli/template-react-base'
             },
             {
                 name: 'react 后台管理模板',
-                value: '@hansen-cli/template-react-backend'
+                value: '@hansens-cli/template-react-backend'
             },
             {
                 name: 'react h5模板',
-                value: '@hansen-cli/template-react-h5'
+                value: '@hansens-cli/template-react-h5'
             },
             {
                 name: 'vue 项目',
-                value: '@hansen-cli/template-vue'
+                value: '@hansens-cli/template-vue'
             }
         ]
     });
@@ -145,6 +145,11 @@ async function create() {
     deleteFiles.forEach(item => {
         fse.removeSync(path.join(targetPath, item));
     })
+
+    console.log(`cd ${projectName}`);
+    console.log(`npm install`);
+    console.log(`yarn`);
+    console.log(`pnpm install`);
 
     console.log(`hansens-cli提醒您，创建项目成功：${targetPath}`);
     

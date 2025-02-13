@@ -1,5 +1,17 @@
 # @hansens-cli/create
 
+## 2.0.1
+
+### Patch Changes
+
+- 优化
+
+## 2.0.0
+
+### Major Changes
+
+- 重新生成 create
+
 ## 1.0.5
 
 ### Patch Changes
