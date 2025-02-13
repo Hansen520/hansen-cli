@@ -1,10 +1,17 @@
-import React from 'react';
-import styles from './index.module.scss';
+import { decrement, increment } from "@/store/home";
+import useStore from '@/hooks/useStore';
 
 function Home() {
+  const [{ counter }, dispatch] = useStore();
   return (
     <div>
-      Home
+      <button aria-label="Increment value" onClick={() => dispatch(increment())}>
+        Increment
+      </button>
+      <span>{counter.value}</span>
+      <button aria-label="Decrement value" onClick={() => dispatch(decrement())}>
+        Decrement
+      </button>
     </div>
   );
 }
