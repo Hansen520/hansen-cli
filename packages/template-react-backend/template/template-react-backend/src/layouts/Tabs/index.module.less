@@ -1,0 +1,59 @@
+/* tabs页面 */
+.tabs {
+    position: relative;
+    background-color: #fff;
+    border-bottom: 1px solid #e4e7ed;
+    :global {
+      .ant-tabs {
+        padding: 0 90px 0 13px;
+        background-color: #fff;
+        .ant-tabs-nav {
+          margin: 0;
+          &::before {
+            border: none;
+          }
+          .ant-tabs-ink-bar {
+            visibility: visible;
+            background: none;
+          }
+          .ant-tabs-tab-with-remove.ant-tabs-tab-active {
+            .ant-tabs-tab-remove {
+              color: #999;
+            }
+          }
+          
+          .ant-tabs-tab {
+            padding: 8px 22px;
+            box-sizing: border-box;
+            color: #000;
+            border: none;
+            border-right: 1px solid #f0f0f0;
+            transition: none;
+            background-color: #00000005;
+            &.ant-tabs-tab-active{
+              background-color: #fff;
+              color: #1890ff;
+              border-right: 1px solid #f0f0f0;
+              &::before {
+                content: '';
+                width: 9px;
+                height: 9px;
+                border-radius: 9px;
+                background: #1890ff;
+                margin-right: 6px;
+              }
+            }
+            &:hover {
+              color: #1890ff;
+            }
+            .ant-tabs-tab-remove {
+              &:hover {
+                color: #333;
+              }
+              
+            }
+          }
+        }
+      }
+    }
+  }

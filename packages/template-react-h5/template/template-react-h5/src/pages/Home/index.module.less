@@ -1,0 +1,54 @@
+.container {
+  width: 100vw;
+  height: 227px;
+  .page {
+    padding: 10px 20px;
+  }
+  --rv-grid-item-content-background-color: #F5F6F7;
+}
+
+.wrapper {
+  text-align: center;
+  font-size: 16px;
+}
+
+ul > li {
+  padding: 10px 0;
+  color: #666;
+}
+
+@keyframes rotate3d {
+  0% { transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
+  100% { transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg); }
+}
+
+.rotate3dElement {
+  margin: 20px auto;
+  animation: rotate3d 5s linear infinite;
+  transform-style: preserve-3d;
+  position: relative;
+  width: 100px;
+  height: 100px;
+  background-color: #ff0000;
+}
+
+.rotate3dElement:before, .rotate3dElement:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: royalblue;
+}
+.rotate3dElement:after {
+  background-color: rgb(134, 201, 33);
+}
+
+.rotate3dElement:before {
+  transform: rotateX(90deg) rotateY(0deg);
+}
+
+.rotate3dElement:after {
+  transform: rotateX(0deg) rotateY(90deg);
+}

@@ -1,0 +1,53 @@
+#image: node:16.13.2-slim
+variables:
+  ## 参数将在Gradle执行时根据脚本的数据进行实时替换
+  ARTIFACT_ID: 'template-dev'
+  VERSION: '1.0.0'
+  ENV_PROFILE: 'cicd'
+  IMAGE_TAG: 'gonglu/${ENV_PROFILE}/${ARTIFACT_ID}:${VERSION}' # 镜像名称
+  CONTAIN_NAME: '${ARTIFACT_ID}' # 镜像名称
+  TARGET_PORT: 8888
+
+stages: # 分段
+  - build
+  - deploy
+
+cache: # 缓存
+  paths:
+    - node_modules
+    - dist
+
+job_build:
+  tags:
+    - shared@222
+  stage: build
+  only:
+    - develop
+  script:
+    - rm -rf ./dist
+    #    - yarn config set registry https://registry.npmmirror.com && yarn version && yarn install
+    - yarn version && yarn install
+    - yarn build:dev
+    - ls -ltr ./dist
+job_deploy:
+  tags:
+    - shared@222
+  stage: deploy
+  dependencies:
+    - job_build
+  only:
+    - develop
+  script:
+    # 构建Dockerfile
+    - rm -rf ./Dockerfile && touch ./Dockerfile
+    - echo "FROM nginx" >> ./Dockerfile
+    - echo "VOLUME /tmp" >> ./Dockerfile
+    - echo "COPY dist/ /usr/share/nginx/html/" >> ./Dockerfile
+    - echo "COPY config/default.conf /etc/nginx/conf.d/default.conf" >> ./Dockerfile
+
+    # 输出Dockerfile以便验证
+    - cat ./Dockerfile
+
+    - docker build -t ${IMAGE_TAG} .
+    - docker rm -f ${CONTAIN_NAME} || true
+    - docker run -d --restart=always -p ${TARGET_PORT}:80 --name ${CONTAIN_NAME} ${IMAGE_TAG}

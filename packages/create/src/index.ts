@@ -18,8 +18,20 @@ async function create() {
         message: '请选择项目模板',
         choices: [
             {
-                name: 'react 项目',
+                name: 'react 原始项目模板',
                 value: '@hansen-cli/template-react'
+            },
+            {
+                name: 'react 基础模板、大屏模板',
+                value: '@hansen-cli/template-react-base'
+            },
+            {
+                name: 'react 后台管理模板',
+                value: '@hansen-cli/template-react-backend'
+            },
+            {
+                name: 'react h5模板',
+                value: '@hansen-cli/template-react-h5'
             },
             {
                 name: 'vue 项目',
@@ -134,7 +146,7 @@ async function create() {
         fse.removeSync(path.join(targetPath, item));
     })
 
-    console.log(`hansen-cli提醒您，创建项目成功：${targetPath}`);
+    console.log(`hansens-cli提醒您，创建项目成功：${targetPath}`);
     
 
     function sleep(ms: number) {

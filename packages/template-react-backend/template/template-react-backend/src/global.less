@@ -1,0 +1,40 @@
+@import './styles/reset.less';
+@import './styles/tw.less';
+
+@font-face {
+  font-family: 'YouSheBiaoTiHei';
+  src: url('@/assets/font/YouSheBiaoTiHei-2.ttf');
+}
+
+
+.body_container {
+  padding: 20px;
+  background: #f0f2f5;
+}
+
+// 全局antd 样式自定义
+//  Descriptions  宽度描述统一处理
+.ant-descriptions-item-label{
+  width: 200px;
+}
+.ant-descriptions-item-content{
+  width: 600px;
+}
+
+
+/* 中间滚动条区域 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 1px;
+  background: hsla(0, 0%, 100%, 0.6);
+}
+::-webkit-scrollbar-track {
+  border-radius: 0;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(95, 95, 95, 0.4);
+  border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(95, 95, 95, 0.7);
+}

@@ -1,0 +1,20 @@
+.container {
+  padding: 20px;
+  background-color: #fff;
+  .tableHeight {
+    :global {
+      .ant-table {
+        height: 100%;
+        .ant-table-content {
+          min-height: calc(100vh - 420px);
+        }
+        .ant-pro-card-body {
+          padding: 0;
+        }
+      }
+      .ant-pro-card-body {
+        padding: 0;
+      }
+    }
+  }
+}

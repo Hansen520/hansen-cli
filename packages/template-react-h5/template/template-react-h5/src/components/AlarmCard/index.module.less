@@ -1,0 +1,40 @@
+.container {
+  .line {
+    width: 2px;
+    height: 10px;
+    display: inline-block;
+    border-radius: 0px 2px;
+    background: linear-gradient(180deg, #42a4ff 0%, #326dff 100%);
+    margin-right: 8px;
+  }
+  .type0,
+  .type1 {
+    padding: 2px 6px;
+    background-color: @color-primary;
+    color: #fff;
+    
+    border-radius: 2px;
+    font-size: @font12;
+  }
+  .type1 {
+    background-color: #edeef0;
+    color: @hint-color2;
+  }
+  --rv-black: @text-color;
+  --rv-card-header-size: @font14;
+}
+.imageHidden {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  line-height: 420%;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 16px;
+  overflow: hidden;
+  text-align: center;
+  font-size: 20px;
+  margin-top: 0;
+}

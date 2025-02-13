@@ -1,0 +1,33 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  
+  
+  padding: 6px 0;
+  .name {
+    width: 60px;
+    padding-left: 8px;
+    position: relative;
+    &::before {
+      content: '';
+      display: block;
+      width: 2px;
+      height: 10px;
+      border-radius: 0px 2px;
+      background: linear-gradient(180deg, #42a4ff 0%, #326dff 100%);
+      position: absolute;
+      left: 0;
+      top: 4px;
+    }
+  }
+  .progress {
+    flex: 1;
+  }
+  .data {
+    width: 100px;
+    text-align: right;
+    font-family: 'D-DIN';
+  }
+}
