@@ -96,7 +96,7 @@ async function create() {
         }
     }
 
-    const spinner = ora('创建项目中1...').start();
+    const spinner = ora('创建项目中...').start();
     await sleep(1000);
 
    
@@ -132,7 +132,7 @@ async function create() {
         ignore: 'node_modules/**'
     });
 
-    console.log(files, 72)
+    // console.log(files, 72)
 
     // 现在 template 里并没有 ejs 模版的语法，我们改下 template-vue、template-react 的 package.json
     for (let i = 0; i < files.length; i++) {
@@ -145,13 +145,11 @@ async function create() {
     deleteFiles.forEach(item => {
         fse.removeSync(path.join(targetPath, item));
     })
-
+    
+    console.log(`hansens-cli提醒您，创建项目成功：${targetPath}`);
     console.log(`cd ${projectName}`);
     console.log(`npm install`);
-    console.log(`yarn`);
-    console.log(`pnpm install`);
-
-    console.log(`hansens-cli提醒您，创建项目成功：${targetPath}`);
+    
     
 
     function sleep(ms: number) {

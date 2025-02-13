@@ -1,5 +1,11 @@
 # @hansens-cli/template-react-h5
 
+## 1.0.2
+
+### Patch Changes
+
+- 修改目录，将里面文件移动到 template 目录
+
 ## 1.0.1
 
 ### Patch Changes

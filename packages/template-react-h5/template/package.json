@@ -1,6 +1,6 @@
 {
+  "name": "<%= projectName %>",
   "version": "1.0.0",
-  "name": "ks-h5",
   "private": false,
   "license": "ISC",
   "author": "Hansen",
