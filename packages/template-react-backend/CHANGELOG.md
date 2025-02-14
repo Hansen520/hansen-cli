@@ -1,5 +1,17 @@
 # @hansens-cli/template-react-backend
 
+## 1.0.4
+
+### Patch Changes
+
+- 优化模板
+
+## 1.0.3
+
+### Patch Changes
+
+- 更改 name 变量
+
 ## 1.0.2
 
 ### Patch Changes

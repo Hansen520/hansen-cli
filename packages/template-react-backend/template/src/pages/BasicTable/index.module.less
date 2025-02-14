@@ -1,0 +1,35 @@
+.container{
+  padding: 24px;
+  background-color: #fff;
+  background-clip: content-box;
+  min-height: 82vh;
+  .search{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+
+  }
+  :global{
+    .ant-page-header{
+      padding-top: 12px;
+      padding-bottom: 0;
+      .ant-page-header-heading-left{
+        margin: 0;
+      }
+      .ant-page-header-heading-title {
+        font-size: 16px;
+      }
+    }
+    .ant-divider-horizontal {
+      margin: 6px 0 12px 0;
+    }
+    .ant-input-group-wrapper{
+      width: 240px;
+    }
+    .ant-pro-card-body{
+      padding: 0;
+    }
+  }
+}

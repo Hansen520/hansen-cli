@@ -1,5 +1,11 @@
 # @hansens-cli/template-react-h5
 
+## 1.0.3
+
+### Patch Changes
+
+- 更改 name 变量
+
 ## 1.0.2
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # @hansens-cli/template-react
 
+## 1.0.5
+
+### Patch Changes
+
+- 更改 name 变量
+
 ## 1.0.4
 
 ### Patch Changes
