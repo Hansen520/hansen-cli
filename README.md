@@ -1,7 +1,3 @@
-
-
-
-
 # 相关的模板的介绍
 
 react
@@ -54,6 +50,8 @@ ts一些项目,在package里面添加
 "types": "dist/index.d.ts",
 
 ```
+## 列出包的所有版本
+`pnpm info <package-name> versions`
 
 ## 上传npm初始化
 
